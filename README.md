@@ -90,6 +90,17 @@ The script prints the steps derived from the action plan and the final output pr
 - `embeddings-*.csv` – embeddings of those chunks
 - `test_output_*.txt` – logs from each test script
 
+## Streamlit Test Dashboard
+
+Run a small dashboard to execute the test scripts from a browser. Start it with:
+
+```bash
+streamlit run test_dashboard.py
+```
+
+The page lets you run individual tests or all of them and shows the log files
+generated in `phase_1`.
+
 ## License
 
 MIT License. Feel free to use and adapt this project.
