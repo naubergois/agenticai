@@ -1,9 +1,6 @@
+Chunks gerados: 1
+Embeddings calculados: 1
+Prompt: What is Clara's podcast about?
+RAG-Based Response: Clara's podcast, Crosscurrents, focuses on exploring the intersections of science and culture. It delves into topics such as ethics, artificial intelligence (AI), and biology, providing insights and discussions on how these areas intersect and influence each other.
 D:\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
   from pandas.core import (
-Traceback (most recent call last):
-  File "D:\agenticai\phase_1\test_rag_knowledge_agent.py", line 24, in <module>
-    print(f"\u2714\ufe0f Chunks gerados: {len(chunks)}")
-  File "D:\anaconda3\Lib\encodings\cp1252.py", line 19, in encode
-    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>

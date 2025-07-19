@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.svg" alt="Agentic Workflows Logo" width="200"/>
+  <img src="logo.png" alt="Agentic Workflows Logo" width="200"/>
 </p>
 
 # Agentic Workflows
