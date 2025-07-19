@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.svg" alt="Agentic Workflows Logo" width="200"/>
+</p>
+
 # Agentic Workflows
 
 This repository demonstrates how to build modular AI agents with the OpenAI API and how to compose them into more complex workflows. The project is divided into two phases:
