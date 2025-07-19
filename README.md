@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.svg" alt="Agentic Workflows Logo" width="200"/>
+  <img src="logo.png" alt="Agentic Workflows Logo" width="200"/>
 </p>
 
 # Agentic Workflows
@@ -102,8 +102,11 @@ Run a small dashboard to execute the test scripts from a browser. Start it with:
 streamlit run test_dashboard.py
 ```
 
-The page lets you run individual tests or all of them and shows the log files
-generated in `phase_1`.
+After starting the command, open `http://localhost:8501` in your browser. The
+page lists all available tests from the `phase_1` directory. Use the drop-down
+to run a single test and see its output live, or click **Run All Tests** to
+execute every script. The dashboard also exposes the `test_output_*.txt` log
+files so you can review previous runs directly from the interface.
 
 ## License
 
