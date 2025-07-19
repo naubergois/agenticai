@@ -1,4 +1,7 @@
 import subprocess
+import os
+
+BASE_DIR = os.path.dirname(__file__)
 
 # Lista de scripts de teste e arquivos de saída
 tests = [
@@ -13,11 +16,17 @@ tests = [
 
 print("Running agent test scripts...\n")
 
+def abs_path(name: str) -> str:
+    """Return path relative to this file's directory."""
+    return os.path.join(BASE_DIR, name)
+
 for script, output_file in tests:
     print(f"Executing {script}...")
     try:
-        with open(output_file, "w", encoding="utf-8") as out:
-            subprocess.run(["python", script], stdout=out, stderr=subprocess.STDOUT, check=False)
+        script_path = abs_path(script)
+        output_path = abs_path(output_file)
+        with open(output_path, "w", encoding="utf-8") as out:
+            subprocess.run(["python", script_path], stdout=out, stderr=subprocess.STDOUT, check=False)
         print(f"Output saved to {output_file}\n")
     except subprocess.CalledProcessError as e:
         print(f"Error running {script}: {e}\n")
