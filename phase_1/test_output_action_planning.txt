@@ -3,20 +3,21 @@ D:\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pan
 Prompt: Create a user story, define the feature, and list tasks
 Extracted Steps:
 1. 1. Create a user story:
-2. Identify the user (persona).
+2. Identify the user persona or role.
 3. Describe what the user wants to achieve.
 4. Specify the reason or benefit for the user.
 5. 2. Define the feature:
 6. Determine the functionality or capability to be developed.
-7. Define the scope and boundaries of the feature.
-8. Identify any dependencies or constraints.
+7. List the requirements or specifications for the feature.
+8. Define acceptance criteria for the feature.
 9. 3. List tasks:
 10. Conduct user research to understand user needs.
 11. Write user story based on research findings.
-12. Collaborate with stakeholders to refine the user story.
-13. Define acceptance criteria for the feature.
-14. Break down the feature into smaller tasks or sub-features.
-15. Prioritize tasks based on importance and dependencies.
-16. Assign tasks to team members.
-17. Monitor progress and adjust tasks as needed.
-18. Test the feature to ensure it meets the user story and acceptance criteria.
+12. Collaborate with stakeholders to refine user story.
+13. Define feature scope and prioritize requirements.
+14. Break down feature into smaller tasks or sub-features.
+15. Assign tasks to team members based on skills and availability.
+16. Set deadlines and milestones for task completion.
+17. Conduct regular reviews and updates on task progress.
+18. Test feature to ensure it meets acceptance criteria.
+19. Gather feedback from users and stakeholders for feature improvement.
