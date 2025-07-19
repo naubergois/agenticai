@@ -1,0 +1,9 @@
+D:\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+Traceback (most recent call last):
+  File "D:\Downloads\1752898165\cd14525-agentic-workflows-classroom\project\starter\phase_1\test_rag_knowledge_agent.py", line 24, in <module>
+    print(f"\u2714\ufe0f Chunks gerados: {len(chunks)}")
+  File "D:\anaconda3\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>

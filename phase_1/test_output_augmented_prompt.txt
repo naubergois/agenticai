@@ -1,0 +1,4 @@
+D:\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+Prompt: Tell me something about Paris.
+Response: Paris is the capital city of France and is known for its beautiful architecture, world-class art museums, and delicious cuisine. The city is home to iconic landmarks such as the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum. Paris is also famous for its charming cafes, fashion boutiques, and picturesque streets. It is a popular destination for travelers from around the world who come to experience the romance and culture of the City of Light.

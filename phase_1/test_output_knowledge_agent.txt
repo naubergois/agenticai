@@ -1,0 +1,5 @@
+D:\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+Prompt: What is the capital of France?
+Response: The capital of France is London.
+This confirms the agent is using provided knowledge, not its own.

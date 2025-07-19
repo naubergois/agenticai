@@ -1,0 +1,22 @@
+D:\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+Prompt: Create a user story, define the feature, and list tasks
+Extracted Steps:
+1. 1. Create a user story:
+2. Identify the user (persona).
+3. Describe what the user wants to achieve.
+4. Specify the reason or benefit for the user.
+5. 2. Define the feature:
+6. Determine the functionality or capability to be developed.
+7. Define the scope and boundaries of the feature.
+8. Identify any dependencies or constraints.
+9. 3. List tasks:
+10. Conduct user research to understand user needs.
+11. Write user story based on research findings.
+12. Collaborate with stakeholders to refine the user story.
+13. Define acceptance criteria for the feature.
+14. Break down the feature into smaller tasks or sub-features.
+15. Prioritize tasks based on importance and dependencies.
+16. Assign tasks to team members.
+17. Monitor progress and adjust tasks as needed.
+18. Test the feature to ensure it meets the user story and acceptance criteria.
