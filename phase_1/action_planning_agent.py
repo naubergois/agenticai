@@ -43,6 +43,6 @@ agent = ActionPlanningAgent(openai_api_key=openai_api_key, knowledge=knowledge)
 prompt = "One morning I wanted to have scrambled eggs"
 steps = agent.extract_steps_from_prompt(prompt)
 
-print("🧑‍🍳 Steps for the task:")
+print("Steps for the task:")
 for idx, step in enumerate(steps, 1):
     print(f"{idx}. {step}")

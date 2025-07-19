@@ -70,6 +70,6 @@ prompts = [
 ]
 
 for prompt in prompts:
-    print("\n📌 Prompt:", prompt)
+    print("\nPrompt:", prompt)
     response = routing_agent.route(prompt)
-    print("🤖 Routed Response:", response)
+    print("Routed Response:", response)

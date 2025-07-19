@@ -262,7 +262,7 @@ class EvaluationAgent:
             print(f"Evaluator Agent Evaluation:\n{evaluation}")
 
             if evaluation.lower().startswith("yes"):  # TODO 6
-                print("✅ Final solution accepted.")
+                print("Final solution accepted.")
                 return {
                     "final_response": response_from_worker,
                     "evaluation": evaluation,

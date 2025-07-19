@@ -11,15 +11,15 @@ tests = [
     ("test_rag_knowledge_agent.py", "test_output_rag_agent.txt")
 ]
 
-print("🚀 Running agent test scripts...\n")
+print("Running agent test scripts...\n")
 
 for script, output_file in tests:
-    print(f"▶️ Executing {script}...")
+    print(f"Executing {script}...")
     try:
         with open(output_file, "w", encoding="utf-8") as out:
             subprocess.run(["python", script], stdout=out, stderr=subprocess.STDOUT, check=True)
-        print(f"✅ Output saved to {output_file}\n")
+        print(f"Output saved to {output_file}\n")
     except subprocess.CalledProcessError as e:
-        print(f"❌ Error running {script}: {e}\n")
+        print(f"Error running {script}: {e}\n")
 
-print("🏁 All tests completed.")
+print("All tests completed.")

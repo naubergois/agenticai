@@ -60,10 +60,10 @@ embeddings_df = rag_agent.calculate_embeddings()
 # TODO: 5 - Ask a prompt and print the response
 prompt = "What is the podcast that Clara hosts about?"
 
-print("\n📌 Prompt:")
+print("\nPrompt:")
 print(prompt)
 
 response = rag_agent.find_prompt_in_knowledge(prompt)
 
-print("\n🎓 RAG Agent Response:")
+print("\nRAG Agent Response:")
 print(response)
