@@ -38,7 +38,8 @@ if log_files:
     st.header("Test Logs")
     for log in log_files:
         with st.expander(os.path.basename(log)):
-            with open(log, "r", encoding="utf-8") as f:
+            with open(log, "r", encoding="latin1") as f:
                 st.text(f.read())
+
 else:
     st.info("No log files found. Run a test to generate logs.")

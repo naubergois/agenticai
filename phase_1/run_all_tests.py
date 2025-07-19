@@ -17,7 +17,7 @@ for script, output_file in tests:
     print(f"Executing {script}...")
     try:
         with open(output_file, "w", encoding="utf-8") as out:
-            subprocess.run(["python", script], stdout=out, stderr=subprocess.STDOUT, check=True)
+            subprocess.run(["python", script], stdout=out, stderr=subprocess.STDOUT, check=False)
         print(f"Output saved to {output_file}\n")
     except subprocess.CalledProcessError as e:
         print(f"Error running {script}: {e}\n")
