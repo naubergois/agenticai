@@ -1,92 +1,95 @@
-🧠 Agentic Workflows – OpenAI-Based AI Agents
-This project showcases the implementation of various agent-based workflows using the OpenAI API. It demonstrates how to build modular, composable agents capable of interacting via natural language, retrieving external knowledge, evaluating responses, routing tasks, and planning actions.
+# Agentic Workflows
 
-The system is structured to be easily extensible and serves as a practical introduction to RAG (Retrieval-Augmented Generation), persona-driven prompting, automated evaluation loops, and routing based on semantic similarity.
+This repository demonstrates how to build modular AI agents with the OpenAI API and how to compose them into more complex workflows. The project is divided into two phases:
 
-📁 Project Structure
-bash
-Copiar
-Editar
-starter/
-│
-├── phase_1/
+- **Phase&nbsp;1:** implementation of individual agents and accompanying test scripts.
+- **Phase&nbsp;2:** composition of those agents into a small product management workflow.
+
+The goal is to provide a practical introduction to retrieval‑augmented generation (RAG), persona-driven prompting, automated evaluation, routing, and action planning.
+
+## Repository Structure
+
+```
+.
+├── phase_1/               # agent library and tests
 │   ├── workflow_agents/
-│   │   └── base_agents.py               # Contains all agent class definitions
-│   ├── test_direct_prompt_agent.py      # Test script for DirectPromptAgent
-│   ├── test_augmented_prompt_agent.py   # Test script for AugmentedPromptAgent
-│   ├── test_knowledge_augmented_agent.py# Test for KnowledgeAugmentedPromptAgent
-│   ├── test_rag_knowledge_agent.py      # Test for RAGKnowledgePromptAgent
-│   ├── test_evaluation_agent.py         # Test for EvaluationAgent
-│   ├── test_routing_agent.py            # Test for RoutingAgent
-│   ├── test_action_planning_agent.py    # Test for ActionPlanningAgent
-│   └── run_all_tests.py                 # Script to execute all tests and log output
-⚙️ Installation
-Clone the repository:
+│   │   └── base_agents.py
+│   ├── direct_prompt_agent.py
+│   ├── augmented_prompt_agent.py
+│   ├── knowledge_augmented_prompt_agent.py
+│   ├── rag_knowledge_prompt_agent.py
+│   ├── evaluation_agent.py
+│   ├── routing_agent.py
+│   ├── action_planning_agent.py
+│   ├── run_all_tests.py
+│   └── test_*              # test scripts and sample outputs
+└── phase_2/
+    ├── agentic_workflow.py # uses agents from phase_1
+    ├── Product-Spec-Email-Router.txt
+    └── workflow_agents/
+```
 
-bash
-Copiar
-Editar
-git clone https://github.com/your-username/agentic-workflows.git
-cd agentic-workflows/starter/phase_1
-Create a virtual environment:
+## Phase 1 – Agent Library
 
-bash
-Copiar
-Editar
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-Install dependencies:
+The first phase introduces seven agent classes located in `phase_1/workflow_agents/base_agents.py`. Each class illustrates a different pattern for interacting with an LLM:
 
-bash
-Copiar
-Editar
-pip install -r requirements.txt
-Set up environment variables:
+- **DirectPromptAgent** – sends a user prompt directly to the model.
+- **AugmentedPromptAgent** – prepends a fixed persona to influence the response.
+- **KnowledgeAugmentedPromptAgent** – adds domain knowledge to the system prompt.
+- **RAGKnowledgePromptAgent** – performs embedding-based search over large text to answer queries.
+- **EvaluationAgent** – iteratively scores and improves another agent’s answer.
+- **RoutingAgent** – selects an appropriate agent based on semantic similarity of the prompt.
+- **ActionPlanningAgent** – extracts step‑by‑step actions from a request.
 
-Create a .env file in the phase_1 directory:
+Each agent has a simple test script in the `phase_1` folder. Running `run_all_tests.py` executes them sequentially and stores their outputs in `test_output_*.txt` files.
 
-env
-Copiar
-Editar
-OPENAI_API_KEY=your_openai_api_key
-🧪 Running the Tests
-To run all the test scripts and save output logs:
+## Phase 2 – Product Management Workflow
 
-bash
-Copiar
-Editar
+The second phase shows how to combine the library into a practical workflow. The script `phase_2/agentic_workflow.py` routes the steps of a high‑level prompt through specialized agents representing a Product Manager, Program Manager and Development Engineer. It demonstrates how action planning, routing and automated evaluation can be chained to generate user stories, product features and development tasks from a single specification.
+
+## Installation
+
+1. Clone the repository and navigate to the project directory.
+   ```bash
+   git clone https://github.com/your-username/agentic-workflows.git
+   cd agentic-workflows
+   ```
+2. Create a virtual environment and activate it (optional but recommended).
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # on Windows use venv\Scripts\activate
+   ```
+3. Install dependencies. The core libraries are `openai`, `python-dotenv`, `numpy` and `pandas`.
+   ```bash
+   pip install openai python-dotenv numpy pandas
+   ```
+4. Create a `.env` file in the repository root with your OpenAI API key:
+   ```
+   OPENAI_API_KEY=your_openai_api_key
+   ```
+
+## Running the Phase 1 Tests
+
+From the `phase_1` directory run:
+```bash
 python run_all_tests.py
-You’ll see outputs like:
+```
+Each test stores its result in a `test_output_*.txt` file.
 
-bash
-Copiar
-Editar
-▶️ Executing test_direct_prompt_agent.py...
-✅ Output saved to test_output_direct_prompt.txt
-🧠 Agents Overview
-Agent	Description
-DirectPromptAgent	Simple LLM call with a user-provided prompt
-AugmentedPromptAgent	Adds a fixed persona to influence response
-KnowledgeAugmentedPromptAgent	Embeds external knowledge into system prompt
-RAGKnowledgePromptAgent	Splits and embeds large texts, uses similarity search
-EvaluationAgent	Iteratively evaluates responses against criteria
-RoutingAgent	Selects the best agent using semantic similarity
-ActionPlanningAgent	Extracts step-by-step instructions from user prompts
+## Running the Phase 2 Workflow
 
-📦 Output Files
-chunks-*.csv: stores text chunks for RAG agent
+With your API key configured, execute:
+```bash
+python phase_2/agentic_workflow.py
+```
+The script prints the steps derived from the action plan and the final output produced by the routed agents.
 
-embeddings-*.csv: stores embeddings of chunks
+## Output Files
 
-test_output_*.txt: logs from each agent's test
+- `chunks-*.csv` – text chunks used by the RAG agent
+- `embeddings-*.csv` – embeddings of those chunks
+- `test_output_*.txt` – logs from each test script
 
-✅ Final Notes
-All agents use the GPT-3.5-Turbo model.
+## License
 
-Embeddings are generated using text-embedding-3-large.
-
-The project uses Vocareum’s OpenAI proxy endpoint (can be adjusted in code).
-
-📜 License
-MIT License. Feel free to use and adapt.
-
+MIT License. Feel free to use and adapt this project.
