@@ -1,0 +1,5 @@
+D:\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+[Router] Best agent: EuropeAgent (score=0.367)
+Prompt: Tell me about Rome in Italy.
+Response: Rome in Italy is known for its rich history as the capital of the Roman Empire. It was a major center of culture, politics, and power in ancient Europe. The city is famous for its iconic landmarks such as the Colosseum, the Roman Forum, and the Pantheon. Rome has a unique blend of ancient Roman, Renaissance, and Baroque architecture, reflecting its diverse cultural influences over the centuries. The city is also known for its delicious cuisine, fashion, and vibrant street life.
