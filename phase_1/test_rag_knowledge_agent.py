@@ -21,11 +21,11 @@ agent = RAGKnowledgePromptAgent(api_key, persona="A science journalist", chunk_s
 
 # Gera os chunks e garante que o arquivo CSV será salvo com nome único
 chunks = agent.chunk_text(knowledge)
-print(f"✔️ Chunks gerados: {len(chunks)}")
+print(f"Chunks gerados: {len(chunks)}")
 
 # Calcula embeddings e salva no CSV
 df_embeddings = agent.calculate_embeddings()
-print(f"✔️ Embeddings calculados: {len(df_embeddings)}")
+print(f"Embeddings calculados: {len(df_embeddings)}")
 
 # Executa busca baseada em similaridade e gera resposta
 response = agent.find_prompt_in_knowledge(prompt)
